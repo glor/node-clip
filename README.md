@@ -1,5 +1,10 @@
 # Node.js Clipboard Manager
 
+[![License](https://img.shields.io/npm/l/node-clip.svg)](LICENSE)
+[![Version](https://img.shields.io/npm/v/node-clip.svg)](https://www.npmjs.com/package/node-clip)
+[![Dependency Status](https://david-dm.org/frissdiegurke/node-clip.svg)](https://david-dm.org/frissdiegurke/node-clip)
+[![Downloads](https://img.shields.io/npm/dt/node-clip.svg)](https://www.npmjs.com/package/node-clip)
+
 A clipboard manager that simplifies the multiple implementations of different systems or services to one unified API.
 
 ## Development - Alpha phase
