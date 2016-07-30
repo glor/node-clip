@@ -53,6 +53,7 @@ It is not recommended to use the `clipboards`, `read`, `write` and `clear` prope
 The `Primary`, `Secondary` and `Tertiary` clipboards are defined with best efforts of the developer to provide a platform-independent API. Keep in mind however that not all of them are available for each system.
 
 For the X-Server within GNU/Linux the definition is as following (according to [ICCCM](https://tronche.com/gui/x/icccm/sec-2.html#s-2.6.1)):
+
  * `Primary`: The `CLIPBOARD` Selection; Usually available via `Ctrl+C`, etc.
  * `Secondary`: The `PRIMARY` Selection; Usually copied by text-selection and pasted by middle-click or `Shift+Insert`.
  * `Tertiary`: The `SECONDARY` Selection.
