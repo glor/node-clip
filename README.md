@@ -31,7 +31,7 @@ All available exports of the main module are as following (the exports object it
 | `use` | `Function(String|Object)` | Register a plugin to use in addition to default systems. The plugin must follow the [specification](./lib/systems/README.md). |
 | `noCache` | `[Clipboard] Function([String|String[]|Object filter], [Boolean force])` | Similar to `get` but does not use caching. |
 
-Instance of the `Clipboard` class provide the following properties:
+Instances of the `Clipboard` class provide the following properties:
 
 | Property | Type | Description |
 |---| --- | --- |
