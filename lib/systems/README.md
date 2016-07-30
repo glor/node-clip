@@ -1,19 +1,19 @@
-A clipboard module must provide at least the following functions:
+A clipboard module must provide at least the following properties:
 
- * `readPrimary(callback)`
- * `writePrimary(value, callback)`
+| Property | Type | Description |
+|---| --- | --- |
+| `name` | `String` | Identifier of the system or clipboard API. |
+| `clipboards` | `String[]` | Array of available clipboard identifications. |
+| `read` | `Function(String clipboard, callback)` | Calls callback with the content read from the clipboard or `null` if clipboard not supported. |
+| `write` | `Function(String clipboard, String value, callback)` | Writes the given value to the clipboard and calls callback with `true`; `false` if the clipboard has not been found. |
 
-It may also provide some more functions as following. Each of those is optional and some have default values generated if not available.
+To enable detection, a module must provide a `Boolean` or `[Boolean] Function` as property `isSupported`. It should be/return `true` if the underlying clipboard API is available. It's called at most once.
 
- * `readSecondary(callback)` - default provides `null`
- * `readTertiary(callback)` - default provides `null`
- * `readAll(callback)` - default provides values as implemented
- * `writeSecondary(string, callback)` - default calls `callback` with an error
- * `writeTertiary(string, callback)` - default calls `callback` with an error
- * `writeAll([string|array], callback)` - default calls implemented `write*` with string or array values respectively (skipping `null` values)
- * `clearPrimary(callback)` - default calls `writePrimary` with empty string
- * `clearSecondary(callback)` - default calls `writeSecondary` with empty string
- * `clearTertiary(callback)` - default calls `writeTertiary` with empty string
- * `clearAll(callback)` - default calls all implemented `clear*` functions
+The following properties may also be provided to overwrite the default behavior:
 
-If in addition a function `[boolean] isSupported()` is implemented, detection will be handled automatically.
+| Property | Type | Default description |
+| --- | --- | --- |
+| `clear` | `Function(String clipboard, callback)` | Call `write(clipboard, "", callback)`. |
+| `readAll` | `Function(callback)` | Call `read` for each available clipboard and call callback with retrieved values. |
+| `writeAll` | `Function(String|String[]|Object values, callback)` | Call `write` for each available clipboard with respective value and call callback with retrieved values. |
+| `clearAll` | `Function(callback)` | Call `writeAll("", callback)`. |
