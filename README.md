@@ -9,7 +9,7 @@ A clipboard manager that simplifies the multiple implementations of different sy
 
 ## Development - Alpha phase
 
-This is an early development version. It is not released yet and has yet to undergo testing.
+This is an early development version. It is not released yet and has to undergo testing first.
 
 ## Installation
 
