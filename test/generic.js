@@ -4,7 +4,7 @@ var crypto = require("crypto");
 
 var SUFFIXES = ["Primary", "Secondary", "Tertiary"];
 
-var clip = require("../lib/main")("windows");
+var clip = require("../lib/main")();
 
 console.log("Using system: '" + clip.name + "'");
 
