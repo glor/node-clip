@@ -62,7 +62,7 @@ All callbacks are called asynchronously, following the node.js convention `callb
 
 ## Support
 
-This package serves the Windows and Darwin OS X platforms as well as the following services (e.g. for GNU/Linux):
+This package serves the Windows and Darwin OS X platforms as well as the following services (e.g. for GNU/Linux or FreeBSD):
 
  * `xclip`
 
